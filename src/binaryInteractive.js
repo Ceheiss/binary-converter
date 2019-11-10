@@ -1,6 +1,7 @@
-function binaryInteractive(currentValue, position){
-  currentValue === "1" ? currentValue = "0" : currentValue = "1";
-  return currentValue
+import toggleValue from './toggleValue.js'
+
+function binaryInteractive(event){
+  toggleValue(event)
 }
 
 export default binaryInteractive

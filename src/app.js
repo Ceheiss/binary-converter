@@ -1,5 +1,5 @@
 import binaryToDecimal from './binaryToDecimal.js'
-import binaryInteractive from './binaryInteractive.js';
+import getBitValue from './getBitValue.js';
 
 let button = document.getElementById("btn");
 let binaryValue = document.getElementById("binary-value");
@@ -12,5 +12,5 @@ button.addEventListener("click", function(){
 })
 
 byteDigits.addEventListener('click', function(e){
-  binaryInteractive(e);
+  getBitValue(e);
 }) 

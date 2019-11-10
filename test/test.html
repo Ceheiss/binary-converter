@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Binary Converter</title>
+</head>
+<body>
+  <script src="simpleTest.js"></script>
+  <script type="module">
+    // binary to decimal
+    import binaryToDecimal from '../src/binaryToDecimal.js'
+    /*
+    it should receive a number a return a string
+    it should output a decimal value that represents the binary value
+    it should only accept zeroes and ones
+    */
+    tests({
+      'it should receive a number a return a string': function(){
+        let transformedNumber = binaryToDecimal(1001);
+        eq(typeof transformedNumber, 'string')
+      },
+      'it should output a decimal value that represents the binary value': function(){
+        let transformedNumber = binaryToDecimal(1001);
+        eq(transformedNumber, '9');
+      },
+      'it should only accept zeroes and ones': function(){
+        let isTypeError = false;
+        try {
+          transformedNumber(20053);
+        } catch(e){
+          isTypeError = (e instanceof TypeError);
+        }
+        eq(isTypeError, true);
+      },
+    })  
+  </script>
+</body>
+</html>

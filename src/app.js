@@ -9,3 +9,8 @@ button.addEventListener("click", function(){
   binaryValue.value = 0;
 })
 
+
+let byteDigits = document.getElementById("byte-digits")
+byteDigits.addEventListener('click', function(e){
+  console.log(e.target.id);
+}) 

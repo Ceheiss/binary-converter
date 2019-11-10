@@ -9,9 +9,11 @@
 <body>
   <script src="simpleTest.js"></script>
   <script type="module">
-    // binary to decimal
+    // Import functions
     import binaryToDecimal from '../src/binaryToDecimal.js'
+    import binaryInteractive from '../src/binaryInteractive.js'
     /*
+    ==== binaryToDecimal ====
     it should receive a number a return a string
     it should output a decimal value that represents the binary value
     it should only accept zeroes and ones
@@ -29,6 +31,14 @@
         let notBinary = binaryToDecimal(100020)
         let returnString = "not binary... Come on! Enter just 0's and 1's";
         eq(notBinary, returnString);
+      },
+    /*
+    ==== binaryInteractive ====
+    it should toggle from 0 to 1
+    it should add the current value to a total
+    */
+      'binaryInteractive': function(){
+        fail();
       },
     })  
   </script>

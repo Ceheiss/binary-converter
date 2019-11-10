@@ -1,0 +1,22 @@
+body {
+  background: #333;
+  color: #eee;
+  font-family: arial;
+}
+
+.byte-bit {
+  font-size: 50px;
+  background: #000;
+  color: greenyellow;
+  padding: 10px;
+}
+
+.grid-container{
+  display: flex;
+}
+
+/* this is to avoid a bug  */
+#byte-digits{
+   width: 1%;
+   height:1%;
+}

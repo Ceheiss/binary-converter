@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Binary Converter</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <section id="binary-to-decimal">
@@ -19,15 +20,15 @@
   <!-- Interactive binary section -->
   <section id="binary-interactive">
     <h3>Play with the values of the byte by clicking the digits</h3>
-    <div id="byte-digits">
-      <div id="128" data-value="0">0</div>
-      <div id="64" data-value="0">0</div>
-      <div id="32" data-value="0">0</div>
-      <div id="16" data-value="0">0</div>
-      <div id="8" data-value="0">0</div>
-      <div id="4" data-value="0">0</div>
-      <div id="2" data-value="0">0</div>
-      <div id="1" data-value="0">0</div>
+    <div id="byte-digits" class="grid-container">
+      <div class="byte-bit" id="128" data-value="0">0</div>
+      <div class="byte-bit" id="64" data-value="0">0</div>
+      <div class="byte-bit" id="32" data-value="0">0</div>
+      <div class="byte-bit" id="16" data-value="0">0</div>
+      <div class="byte-bit" id="8" data-value="0">0</div>
+      <div class="byte-bit" id="4" data-value="0">0</div>
+      <div class="byte-bit" id="2" data-value="0">0</div>
+      <div class="byte-bit" id="1" data-value="0">0</div>
     </div>
     <h3 id="byte-value-output"></h3>
   </section>

@@ -26,13 +26,9 @@
         eq(transformedNumber, '9');
       },
       'it should only accept zeroes and ones': function(){
-        let isTypeError = false;
-        try {
-          transformedNumber(20053);
-        } catch(e){
-          isTypeError = (e instanceof TypeError);
-        }
-        eq(isTypeError, true);
+        let notBinary = binaryToDecimal(100020)
+        let returnString = "not binary... Come on! Enter just 0's and 1's";
+        eq(notBinary, returnString);
       },
     })  
   </script>

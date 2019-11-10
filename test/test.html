@@ -12,6 +12,7 @@
     // Import functions
     import binaryToDecimal from '../src/binaryToDecimal.js'
     import updateBitValue from '../src/updateBitValue.js'
+    import getByteValue from '../src/getByteValue.js'
     /*
     ==== binaryToDecimal ====
     it should receive a number a return a string
@@ -35,6 +36,7 @@
     /*
     ==== updateValue ====
     it should toggle from 0 to 1
+    it should toggle from 1 to 0
     */
       'it should return 0 if 1 is given': function(){
         let newValue = updateBitValue("1");
@@ -43,6 +45,14 @@
       'it should return 1 if 0 is given': function(){
         let newValue = updateBitValue("0");
         eq(newValue, "1")
+      },
+    /*
+    ==== getByteValue ====
+    it should reduce numbers and return the sum
+    */
+    'it should return 0 if 1 is given': function(){
+        let newValue = getByteValue([1,2,3]);
+        eq(newValue, 6)
       },
     })  
   </script>

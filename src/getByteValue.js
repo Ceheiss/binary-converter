@@ -1,4 +1,3 @@
-export function getByteValue(array){
-  let byteTotal = array.reduce((acc, bitValue) => acc + bitValue);
-  return byteTotal;
+export function getByteValue(byteValueArray){
+  return byteValueArray.reduce((acc, bitValue) => acc + bitValue);
 }

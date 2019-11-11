@@ -1,6 +1,6 @@
-export function binaryToDecimal(number) {
-  let numArr = String(number).split("").reverse();
-  let length = numArr.length;
+export function binaryToDecimal(providedBinaryNumber) {
+  const numArr = String(providedBinaryNumber).split("").reverse();
+  const length = numArr.length;
   let decimalValue = 0;
   let multiplier = 2;
   for (let i = 0; i < length; i++){
@@ -14,7 +14,7 @@ export function binaryToDecimal(number) {
       multiplier = multiplier * 2;
     }
   }
-  let returnedValue = String(decimalValue);
+  const returnedValue = String(decimalValue);
   return returnedValue
 }
 

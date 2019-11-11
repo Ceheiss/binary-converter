@@ -1,7 +1,16 @@
 body {
-  background: #333;
+  background: linear-gradient(45deg, #333,#666);
   color: #eee;
-  font-family: arial;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 70px;
+  font-family: 'Libre Barcode 39 Text', cursive;
 }
 
 .byte-bit {
@@ -9,7 +18,11 @@ body {
   background: #000;
   color: greenyellow;
   padding: 10px;
+  border-radius: 3px;
+  border: 2px greenyellow dotted;
 }
+
+.byte-bit:hover { cursor: pointer; }
 
 .grid-container{
   display: flex;
@@ -17,6 +30,52 @@ body {
 
 /* this is to avoid a bug  */
 #byte-digits{
-   width: 1%;
+   width: 60%;
    height:1%;
+}
+
+#binary-to-decimal, #binary-interactive{
+  font-size: 24px;
+  background: #f4ecd8;
+  color: #5b4636;
+  padding: 30px;
+  margin: 30px;
+  margin-bottom: 50PX;
+  border-radius: 7px;
+  min-height: 200px;
+  min-width: 700px;
+  box-shadow: 5px 10px #5b4636;
+}
+
+#byte-value-output{
+  font-size: 40px;
+  color: green;
+}
+
+#binary-value {
+  margin: 25px;
+}
+
+#binary-interactive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+}
+
+#btn {
+  font-size: 17px;
+  background: #f4ecd8;
+  color: #5b4636;
+  box-shadow: 3px 1px #5b4636;
+}
+
+#btn:focus {
+  outline: none;
+}
+
+#btn:hover {
+  cursor: pointer;
+  background: #5b4636;
+  color: #f4ecd8;
 }

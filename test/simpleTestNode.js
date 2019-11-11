@@ -40,7 +40,7 @@
  * -Joe Walnes
  * MIT License. See https://github.com/joewalnes/jstinytest/
  */
-
+const logSymbols = require('log-symbols');
 
 const SimpleTestHelper = {
   renderStats: function(failures, successes){
@@ -69,10 +69,10 @@ const SimpleTest = {
           try {
               testAction.apply(this);
               successes++;
-              console.log("\x1b[32m", testName);
+              console.log(logSymbols.success, "\x1b[32m", testName);
           } catch (e) {
               failures++;
-              console.error("\x1b[31m",`${e.name} ${failures}: `, e.message);
+              console.error(logSymbols.error, "\x1b[31m", `${e.name} ${failures}: `, e.message);
           }
       };
       console.log("\x1b[34m", `From a total of ${successes + failures} tests:`)

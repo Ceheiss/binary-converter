@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Ceheiss/binary-converter#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "log-symbols": "^3.0.0"
   }
 }

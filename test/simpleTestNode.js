@@ -69,14 +69,15 @@ const SimpleTest = {
           try {
               testAction.apply(this);
               successes++;
-              console.log('%c' + testName, 'color: green; font-family: arial;');
+              console.log("\x1b[32m", testName);
           } catch (e) {
               failures++;
-              console.groupCollapsed('%c' + testName, 'color: red; font-weight: bold;font-family: arial;');
-              console.error(e.stack);
-              console.groupEnd();
+              console.error("\x1b[31m",`${e.name} ${failures}: `, e.message);
           }
       };
+      console.log("\x1b[34m", `From a total of ${successes + failures} tests:`)
+      console.log("\x1b[34m", `You had ${successes} passing tests.`);
+      console.log("\x1b[34m", `You had ${failures} errors.`, "\x1b[37m");
   },
 
   fail: function(msg) {

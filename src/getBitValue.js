@@ -2,7 +2,6 @@ export function getBitValue(powerOfTwo, bitStatus){
     return powerOfTwo * bitStatus;
 }
 
-
   /*
   - una responsabilidad por funcion.
   - que sea reutilizable.

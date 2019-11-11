@@ -1,7 +1,5 @@
 import { binaryToDecimal } from './binaryToDecimal.js'
-import { getBitValue } from './getBitValue.js';
-import { getByteValue } from './getByteValue.js';
-import { toggleBitValue } from './toggleBitValue.js'
+import { toggleBitValue, getBitValue, getByteValue } from './byteSectionFunctions';
 
 const button = document.getElementById("btn");
 const binaryValue = document.getElementById("binary-value");

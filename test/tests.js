@@ -1,8 +1,7 @@
 // Import functions
 import { tests, eq } from "./simpleTestNode";
 import { binaryToDecimal } from "../src/binaryToDecimal";
-import { updateBitValue } from "../src/updateBitValue";
-import { getByteValue } from "../src/getByteValue";
+import { updateBitValue, getByteValue } from '../src/byteSectionFunctions';
 
 /*
     ==== binaryToDecimal ====

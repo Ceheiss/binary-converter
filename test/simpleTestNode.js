@@ -1,44 +1,8 @@
 /**
- * Modification to TinyTest called SimpleTest
- * Functionality is the same one, so I will keep the description below:
+ * Modification to TinyTest called SimpleTestNode
  * 
- * Very simple in-browser unit-test library, with zero deps.
- *
- * Background turns green if all tests pass, otherwise red.
- * View the JavaScript console to see failure reasons.
- *
- * Example:
- *
- *   adder.js (code under test)
- *
- *     function add(a, b) {
- *       return a + b;
- *     }
- *
- *   adder-test.html (tests - just open a browser to see results)
- *
- *     <script src="tinytest.js"></script>
- *     <script src="adder.js"></script>
- *     <script>
- *
- *     tests({
- *
- *       'adds numbers': function() {
- *         eq(6, add(2, 4));
- *         eq(6.6, add(2.6, 4));
- *       },
- *
- *       'subtracts numbers': function() {
- *         eq(-2, add(2, -4));
- *       },
- *
- *     });
- *     </script>
- *
- * That's it. Stop using over complicated frameworks that get in your way.
- *
- * -Joe Walnes
- * MIT License. See https://github.com/joewalnes/jstinytest/
+ * Library has same functionality than TinyTest but was modified to run 
+ * better in Node (so no need of the HTML file).
  */
 const logSymbols = require('log-symbols');
 

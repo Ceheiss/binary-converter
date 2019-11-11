@@ -76,13 +76,7 @@ const SimpleTest = {
               console.error(e.stack);
               console.groupEnd();
           }
-      }
-      setTimeout(function() { // Give document a chance to complete
-          if (window.document && document.body) {
-              document.body.style.backgroundColor = (failures == 0 ? '#99ff99' : '#ff9999');
-              SimpleTestHelper.renderStats(failures, successes);
-          }
-      }, 0);
+      };
   },
 
   fail: function(msg) {
@@ -109,9 +103,13 @@ const SimpleTest = {
 
 };
 
-const fail               = SimpleTest.fail.bind(SimpleTest),
+
+export const fail               = SimpleTest.fail.bind(SimpleTest),
   assert             = SimpleTest.assert.bind(SimpleTest),
   assertEquals       = SimpleTest.assertEquals.bind(SimpleTest),
   eq                 = SimpleTest.assertEquals.bind(SimpleTest), // alias for assertEquals
   assertStrictEquals = SimpleTest.assertStrictEquals.bind(SimpleTest),
   tests              = SimpleTest.run.bind(SimpleTest)
+
+
+  

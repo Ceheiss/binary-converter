@@ -1,4 +1,4 @@
-function binaryToDecimal(number) {
+export function binaryToDecimal(number) {
   let numArr = String(number).split("").reverse();
   let length = numArr.length;
   let decimalValue = 0;
@@ -17,8 +17,4 @@ function binaryToDecimal(number) {
   let returnedValue = String(decimalValue);
   return returnedValue
 }
-
-export default binaryToDecimal;
-
-
 

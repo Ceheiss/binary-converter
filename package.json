@@ -1,0 +1,23 @@
+{
+  "name": "binary-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-modules  test/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ceheiss/binary-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ceheiss/binary-converter/issues"
+  },
+  "homepage": "https://github.com/Ceheiss/binary-converter#readme"
+}

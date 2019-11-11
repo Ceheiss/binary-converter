@@ -1,12 +1,12 @@
-import toggleBitValue from './toggleBitValue.js'
-
-function getBitValue(event){
-  toggleBitValue(event)
-  let powerOfTwo = Number(event.target.id);
-  let bitStatus = Number(event.target.innerHTML);
-  let dataValue = powerOfTwo * bitStatus;
-  event.target.setAttribute("data-value", dataValue);
-  return dataValue;
+export function getBitValue(powerOfTwo, bitStatus){
+    return powerOfTwo * bitStatus;
 }
 
-export default getBitValue
+
+  /*
+  - una responsabilidad por funcion.
+  - que sea reutilizable.
+  - no afecte ni sea afectada por entorno (leer o escribir al dom).
+  - refactoring, Martin Fowler.
+  - Diferencia de modulos en ES6 y Node.
+  */

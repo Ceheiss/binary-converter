@@ -1,4 +1,4 @@
-export function binaryToDecimal(providedBinaryNumber) {
+export const binaryToDecimal = (providedBinaryNumber) => {
   const numArr = String(providedBinaryNumber).split("").reverse();
   const length = numArr.length;
   let decimalValue = 0;

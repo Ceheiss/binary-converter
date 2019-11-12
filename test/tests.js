@@ -1,7 +1,8 @@
 // Import functions
 import { tests, eq } from "./simpleTestNode";
 import { binaryToDecimal } from "../src/binaryToDecimal";
-import { updateBitValue, getByteValue } from '../src/byteSectionFunctions';
+import {  getByteValue, getBitValue } from '../src/byteSectionFunctions';
+import { updateBitValue } from '../src/domMutatingFunctions';
 
 /*
     ==== binaryToDecimal ====
@@ -17,7 +18,7 @@ tests({
   },
   "it should output a decimal value that represents the binary value": function() {
     let transformedNumber = binaryToDecimal(1001);
-    eq(transformedNumber, "9");
+    eq(transformedNumber, String(parseInt(1001, 2)));
   },
   "it should only accept zeroes and ones": function() {
     let notBinary = binaryToDecimal(100020);
@@ -25,7 +26,7 @@ tests({
     eq(notBinary, returnString);
   },
   /*
-    ==== updateValue ====
+    ==== updateBitValue ====
     it should toggle from 0 to 1
     it should toggle from 1 to 0
     */
@@ -40,9 +41,17 @@ tests({
   /*
     ==== getByteValue ====
     it should reduce numbers and return the sum
-    */
+  */
   "it should return 0 if 1 is given": function() {
     let newValue = getByteValue([1, 2, 3]);
     eq(newValue, 6);
+  },
+  /*
+    ==== getBitValue ====
+    it should multiply 2 values
+  */
+  "it should multiply two values": function() {
+    let newValue = getBitValue(2,2);
+    eq(newValue, 4);
   }
 });
